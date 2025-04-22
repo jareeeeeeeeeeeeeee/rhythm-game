@@ -1,4 +1,4 @@
 extends Sprite2D
 
-func _init():
+func _process(delta: float):
 	$sprite.modulate = Color(1,0,0)
