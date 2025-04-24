@@ -1,19 +1,79 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccg1j817nug8u"]
+[gd_scene load_steps=2 format=3 uid="uid://ccg1j817nug8u"]
 
 [ext_resource type="Texture2D" uid="uid://d3ku85v5e3ldc" path="res://Note.png" id="1_l3thc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dpw2a"]
-size = Vector2(1152, 648)
-
 [node name="Background" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(576, 324)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_dpw2a")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.272047, 0.272047, 0.272047, 1)
-scale = Vector2(18, 10.125)
+position = Vector2(960, 540)
+scale = Vector2(30, 16.875)
 texture = ExtResource("1_l3thc")
+
+[node name="Lane1" type="Sprite2D" parent="."]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(340, 540)
+scale = Vector2(0.078, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="Lane2" type="Sprite2D" parent="."]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(490, 540)
+scale = Vector2(0.078, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="Lane3" type="Sprite2D" parent="."]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(640, 540)
+scale = Vector2(0.078, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="Lane4" type="Sprite2D" parent="."]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(790, 540)
+scale = Vector2(0.078, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="Lane5" type="Sprite2D" parent="."]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(940, 540)
+scale = Vector2(0.078, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="Lane6" type="Sprite2D" parent="."]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(1090, 540)
+scale = Vector2(0.078, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="Lane7" type="Sprite2D" parent="."]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(1240, 540)
+scale = Vector2(0.078, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="Lane8" type="Sprite2D" parent="."]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(1390, 540)
+scale = Vector2(0.078, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="Lane9" type="Sprite2D" parent="."]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(1540, 540)
+scale = Vector2(0.078, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1616.0
+offset_top = 409.0
+offset_right = 1676.0
+offset_bottom = 536.0
+scale = Vector2(2, 2)
+text = "Perfect:
+Great:
+Good:
+Bad:
+Miss:"
+horizontal_alignment = 1
+vertical_alignment = 1

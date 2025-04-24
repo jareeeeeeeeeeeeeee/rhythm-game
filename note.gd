@@ -1,4 +1,7 @@
 extends RigidBody2D
 
-func _init():
-	$sprite.self_modulate = Color(1,0,0)
+@export_range(1,100)
+var speed = 2
+
+func _process(delta: float):
+	self.position.y += speed

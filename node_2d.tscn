@@ -1,8 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://rnlkyejy4c04"]
+[gd_scene load_steps=3 format=3 uid="uid://rnlkyejy4c04"]
 
+[ext_resource type="PackedScene" uid="uid://ccg1j817nug8u" path="res://Background.tscn" id="1_0e48y"]
 [ext_resource type="PackedScene" uid="uid://bbhciduwoai38" path="res://Note.tscn" id="1_wtcfe"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Background" parent="." instance=ExtResource("1_0e48y")]
+
 [node name="Note" parent="." instance=ExtResource("1_wtcfe")]
-position = Vector2(547, -62)
+position = Vector2(565, -100)
+
+[node name="Note2" parent="." instance=ExtResource("1_wtcfe")]
+position = Vector2(415, -20)
+
+[node name="Note3" parent="." instance=ExtResource("1_wtcfe")]
+position = Vector2(865, 120)
+
+[node name="Note4" parent="." instance=ExtResource("1_wtcfe")]
+position = Vector2(1315, -91)
