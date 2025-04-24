@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc1pt3dub622k"]
-
-[ext_resource type="Texture2D" uid="uid://fo31w3rg6mng" path="res://nene.webp" id="1_wtcfe"]
-
-[node name="Node2D" type="Node2D"]
-
-[node name="Nene" type="Sprite2D" parent="."]
-position = Vector2(436, 293)
-texture = ExtResource("1_wtcfe")
