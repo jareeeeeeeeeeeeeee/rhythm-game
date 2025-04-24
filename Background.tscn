@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccg1j817nug8u"]
+[gd_scene load_steps=3 format=3 uid="uid://ccg1j817nug8u"]
 
 [ext_resource type="Texture2D" uid="uid://d3ku85v5e3ldc" path="res://Note.png" id="1_l3thc"]
+[ext_resource type="Script" uid="uid://crnayyb6isxoc" path="res://label.gd" id="2_dpw2a"]
 
 [node name="Background" type="Node2D"]
 
@@ -65,10 +66,10 @@ scale = Vector2(0.078, 16.875)
 texture = ExtResource("1_l3thc")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 1616.0
-offset_top = 409.0
-offset_right = 1676.0
-offset_bottom = 536.0
+offset_left = 1657.0
+offset_top = 396.0
+offset_right = 1717.0
+offset_bottom = 523.0
 scale = Vector2(2, 2)
 text = "Perfect:
 Great:
@@ -77,3 +78,4 @@ Bad:
 Miss:"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("2_dpw2a")
