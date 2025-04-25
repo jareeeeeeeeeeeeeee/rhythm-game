@@ -1,5 +1,6 @@
 extends Button
 
+
 func _ready():
 	var button = Button.new()
 	button.text = "Play Selected Song"
@@ -8,3 +9,5 @@ func _ready():
 	
 func _button_pressed():
 	print("miku miku beam")
+	print(get_parent().Songs[get_parent().Current_Song])
+	

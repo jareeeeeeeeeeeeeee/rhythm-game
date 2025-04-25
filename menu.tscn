@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvfkxdmlr8u2c"]
+[gd_scene load_steps=6 format=3 uid="uid://cvfkxdmlr8u2c"]
 
 [ext_resource type="Script" uid="uid://dnxnxr0pr8sam" path="res://button.gd" id="1_4hy44"]
-[ext_resource type="Texture2D" uid="uid://b4dbe86fj5ts3" path="res://mcls.jpg" id="2_ytr4m"]
-[ext_resource type="Texture2D" uid="uid://bxd005t0ujbwc" path="res://1ln.jpg" id="3_l48gv"]
-[ext_resource type="Texture2D" uid="uid://dkp6yanxwgsl3" path="res://donfai.jpg" id="4_ecwwl"]
+[ext_resource type="Script" uid="uid://codx1nje22ha4" path="res://Menu_Scroll.gd" id="1_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://dfcacahct4yo0" path="res://Songlist/mcls.jpg" id="3_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://ddixq3uj76nyc" path="res://Songlist/1ln.jpg" id="4_l48gv"]
+[ext_resource type="Texture2D" uid="uid://dgxwg38uh4ue1" path="res://Songlist/donfai.jpg" id="5_ecwwl"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ytr4m")
 
 [node name="Play_button" type="Button" parent="."]
 offset_left = 402.0
@@ -14,16 +16,16 @@ offset_right = 410.0
 offset_bottom = 381.0
 script = ExtResource("1_4hy44")
 
-[node name="Mcls" type="Sprite2D" parent="."]
-position = Vector2(579, 180)
-texture = ExtResource("2_ytr4m")
-
-[node name="1Ln" type="Sprite2D" parent="."]
-position = Vector2(937, 185)
-scale = Vector2(0.793333, 0.833333)
-texture = ExtResource("3_l48gv")
-
-[node name="Donfai" type="Sprite2D" parent="."]
-position = Vector2(203, 194)
+[node name="Left" type="Sprite2D" parent="."]
+position = Vector2(200, 200)
 scale = Vector2(0.833333, 0.811111)
-texture = ExtResource("4_ecwwl")
+texture = ExtResource("4_l48gv")
+
+[node name="Selected" type="Sprite2D" parent="."]
+position = Vector2(550, 190)
+texture = ExtResource("5_ecwwl")
+
+[node name="Right" type="Sprite2D" parent="."]
+position = Vector2(900, 200)
+scale = Vector2(0.793333, 0.833333)
+texture = ExtResource("3_ytr4m")
