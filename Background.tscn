@@ -65,6 +65,54 @@ position = Vector2(1540, 540)
 scale = Vector2(0.078, 16.875)
 texture = ExtResource("1_l3thc")
 
+[node name="LightUp1" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(415, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp2" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(565, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp3" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(715, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp4" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(865, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp5" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(1015, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp6" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(1165, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp7" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(1315, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp8" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(1465, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
 [node name="Label" type="Label" parent="."]
 offset_left = 1657.0
 offset_top = 396.0
