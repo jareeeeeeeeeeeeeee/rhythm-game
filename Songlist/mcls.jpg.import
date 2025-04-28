@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxd005t0ujbwc"
-path="res://.godot/imported/1ln.jpg-9cc0a428a117ab2b88dc13e5240d6561.ctex"
+uid="uid://dfcacahct4yo0"
+path="res://.godot/imported/mcls.jpg-99e7ca6b53c379802d1556a5ec77eae4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://1ln.jpg"
-dest_files=["res://.godot/imported/1ln.jpg-9cc0a428a117ab2b88dc13e5240d6561.ctex"]
+source_file="res://Songlist/mcls.jpg"
+dest_files=["res://.godot/imported/mcls.jpg-99e7ca6b53c379802d1556a5ec77eae4.ctex"]
 
 [params]
 
