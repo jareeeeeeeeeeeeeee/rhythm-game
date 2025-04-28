@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccg1j817nug8u"]
 
 [ext_resource type="Texture2D" uid="uid://d3ku85v5e3ldc" path="res://Note.png" id="1_l3thc"]
-[ext_resource type="Script" uid="uid://crnayyb6isxoc" path="res://label.gd" id="2_dpw2a"]
+[ext_resource type="Script" path="res://label.gd" id="2_dpw2a"]
 
 [node name="Background" type="Node2D"]
 
@@ -63,6 +63,54 @@ texture = ExtResource("1_l3thc")
 modulate = Color(0.103744, 0.103744, 0.103744, 1)
 position = Vector2(1540, 540)
 scale = Vector2(0.078, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp1" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(415, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp2" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(565, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp3" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(715, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp4" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(865, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp5" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(1015, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp6" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(1165, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp7" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(1315, 540)
+scale = Vector2(2.25, 16.875)
+texture = ExtResource("1_l3thc")
+
+[node name="LightUp8" type="Sprite2D" parent="."]
+modulate = Color(0.435294, 0.435294, 0.435294, 0)
+position = Vector2(1465, 540)
+scale = Vector2(2.25, 16.875)
 texture = ExtResource("1_l3thc")
 
 [node name="Label" type="Label" parent="."]

@@ -4,6 +4,9 @@ extends Sprite2D
 var speed = 10
 var lane = randi_range(0,7)
 
+@onready
+var label = get_node("../Background/Label")
+
 func _init():
 	self.position.x = 415 + lane * 150
 	self.position.y = -30
@@ -12,4 +15,5 @@ func _init():
 func _process(delta: float):
 	self.position.y += speed
 	if self.position.y >= 1100:
+		label.notes["miss"] += 1
 		queue_free()
