@@ -12,7 +12,7 @@ func _init():
 	self.position.y = -30
 	self.add_to_group(str(lane))
 
-func _process(delta: float):
+func _process(dt: float):
 	self.position.y += speed
 	if self.position.y >= 1100:
 		label.notes["miss"] += 1
