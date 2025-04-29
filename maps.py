@@ -35,7 +35,7 @@ class Game:
             elif event.type == pygame.KEYDOWN:
                 if event.key == 32:
                     self.store_inputs = True
-                    pygame.mixer.music.load(r"comprogIII\game_design\music\spotidownloader.com - Duality - Dimrain47.mp3")
+                    pygame.mixer.music.load(r"comprogIII\rhythm-game\music\Fire_Dance_(Game_Version_-_Vivid_BAD_SQUAD).ogg")
                     pygame.mixer.music.play(-1, self.mtime)
                 if event.key == 13:
                     self.store_inputs = False
