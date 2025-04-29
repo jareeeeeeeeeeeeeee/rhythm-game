@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b51noukqe8hfp"
-path="res://.godot/imported/donfai.jpg-7f22ba96fc24c06f2b9cefdf161f0e66.ctex"
+uid="uid://cvje11umbax1x"
+path="res://.godot/imported/1ln.jpg-d894c437968bc2801cec50efceb159fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/donfai.jpg"
-dest_files=["res://.godot/imported/donfai.jpg-7f22ba96fc24c06f2b9cefdf161f0e66.ctex"]
+source_file="res://Songlist/1ln.jpg"
+dest_files=["res://.godot/imported/1ln.jpg-d894c437968bc2801cec50efceb159fa.ctex"]
 
 [params]
 
