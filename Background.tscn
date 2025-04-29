@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccg1j817nug8u"]
 
 [ext_resource type="Texture2D" uid="uid://d3ku85v5e3ldc" path="res://Note.png" id="1_l3thc"]
-[ext_resource type="Script" path="res://label.gd" id="2_dpw2a"]
+[ext_resource type="Script" uid="uid://crnayyb6isxoc" path="res://label.gd" id="2_dpw2a"]
 
 [node name="Background" type="Node2D"]
 
