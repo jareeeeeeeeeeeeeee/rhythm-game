@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b51noukqe8hfp"
-path="res://.godot/imported/donfai.jpg-ad34dce104deeca1bc8d4e49645ff246.ctex"
+uid="uid://cvje11umbax1x"
+path="res://.godot/imported/1ln.jpg-1544303163015f3b667fc4efbe6a5c8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://donfai.jpg"
-dest_files=["res://.godot/imported/donfai.jpg-ad34dce104deeca1bc8d4e49645ff246.ctex"]
+source_file="res://images/1ln.jpg"
+dest_files=["res://.godot/imported/1ln.jpg-1544303163015f3b667fc4efbe6a5c8b.ctex"]
 
 [params]
 

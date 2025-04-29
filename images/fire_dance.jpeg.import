@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvje11umbax1x"
-path="res://.godot/imported/1ln.jpg-9cc0a428a117ab2b88dc13e5240d6561.ctex"
+uid="uid://cgh0qi3qskdp7"
+path="res://.godot/imported/fire_dance.jpeg-b0097c2916403caf303805d5793e3e77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://1ln.jpg"
-dest_files=["res://.godot/imported/1ln.jpg-9cc0a428a117ab2b88dc13e5240d6561.ctex"]
+source_file="res://images/fire_dance.jpeg"
+dest_files=["res://.godot/imported/fire_dance.jpeg-b0097c2916403caf303805d5793e3e77.ctex"]
 
 [params]
 
