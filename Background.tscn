@@ -11,6 +11,17 @@ position = Vector2(960, 540)
 scale = Vector2(30, 16.875)
 texture = ExtResource("1_l3thc")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.319873, 0.319873, 0.319873, 1)
+position = Vector2(940, 900)
+scale = Vector2(18.797, 0.586)
+texture = ExtResource("1_l3thc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0.316167, 0.316167, 0.316167, 0.713726)
+scale = Vector2(0.995, 0.85)
+texture = ExtResource("1_l3thc")
+
 [node name="Lane1" type="Sprite2D" parent="."]
 modulate = Color(0.103744, 0.103744, 0.103744, 1)
 position = Vector2(340, 540)
