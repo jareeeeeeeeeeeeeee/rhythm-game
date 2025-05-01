@@ -15,7 +15,7 @@ var note_preload = preload("Note.tscn")
 @onready var lane8 = get_node("./Background/LightUp8")
 @onready var lanes = [lane1, lane2, lane3, lane4, lane5, lane6, lane7, lane8]
 
-func _process(_delta: float):
+func _process(dt: float):
 	timer -= 1
 	if timer == 0:
 		timer = 25

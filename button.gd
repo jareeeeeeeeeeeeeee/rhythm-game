@@ -7,4 +7,5 @@ func _ready():
 	add_child(button)
 	
 func _button_pressed():
-	print("miku miku beam")
+	print(get_node("../Selected"))
+	get_tree().change_scene_to_file("res://node_2d.tscn")
