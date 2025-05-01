@@ -33,23 +33,27 @@ func _input(ev):
 		var hit_note = get_tree().get_nodes_in_group("0")[0]
 		print(hit_note.position.y)
 		hit_note.queue_free()
+		lane1.modulate.a = 1
 	elif Input.is_action_just_pressed("button1") and not ev.echo and not get_tree().get_nodes_in_group("0"):
 		lane1.modulate.a = 1
 	if Input.is_action_just_pressed("button2") and not ev.echo and get_tree().get_nodes_in_group("1"):
 		var hit_note = get_tree().get_nodes_in_group("1")[0]
 		print(hit_note.position.y)
 		hit_note.queue_free()
+		lane2.modulate.a = 1
 	elif Input.is_action_just_pressed("button2") and not ev.echo and not get_tree().get_nodes_in_group("1"):
 		lane2.modulate.a = 1
 	if Input.is_action_just_pressed("button3") and not ev.echo and get_tree().get_nodes_in_group("2"):
 		var hit_note = get_tree().get_nodes_in_group("2")[0]
 		print(hit_note.position.y)
 		hit_note.queue_free()
+		lane3.modulate.a = 1
 	elif Input.is_action_just_pressed("button3") and not ev.echo and not get_tree().get_nodes_in_group("2"):
 		lane3.modulate.a = 1
 	if Input.is_action_just_pressed("button4") and not ev.echo and get_tree().get_nodes_in_group("3"):
 		var hit_note = get_tree().get_nodes_in_group("3")[0]
 		print(hit_note.position.y)
 		hit_note.queue_free()
+		lane4.modulate.a = 1
 	elif Input.is_action_just_pressed("button4") and not ev.echo and not get_tree().get_nodes_in_group("3"):
 		lane4.modulate.a = 1
