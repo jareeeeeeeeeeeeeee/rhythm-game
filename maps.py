@@ -1,5 +1,6 @@
 import pygame
 import sys
+import csv
 
 from collections import defaultdict as ddict
 from typing import Self
@@ -18,7 +19,10 @@ class Game:
         self.framecount = 0
         self.framedata = []
         self.store_inputs = False
-        
+        self.countdown = 5
+        self.counting_down = False
+        self.start = None
+        self.n = 0
         self.mtime = 0
         self.print_height = 780
 
@@ -30,23 +34,46 @@ class Game:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 print(self.framedata)
+                with open(r"comprogIII\rhythm-game\maps\fire_dance.csv", "w") as csvfile:
+                    writer = csv.DictWriter(csvfile, fieldnames=["frame", "lane"])
+                    writer.writeheader()
+                    for x in self.framedata:
+                        writer.writerow({"frame": x[0], "lane": x[1]})
                 pygame.quit()
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
                 if event.key == 32:
-                    self.store_inputs = True
-                    pygame.mixer.music.load(r"comprogIII\rhythm-game\music\Fire_Dance_(Game_Version_-_Vivid_BAD_SQUAD).ogg")
-                    pygame.mixer.music.play(-1, self.mtime)
+                    self.counting_down = True
+                    self.start = self.mtime
+                    self.n = 0
                 if event.key == 13:
                     self.store_inputs = False
                     pygame.mixer.music.unload()
                 elif self.store_inputs:
-                    self.framedata.append([self.framecount, event.key])
+                    if event.key == 122:
+                        self.framedata.append([self.framecount, "1"])
+                    if event.key == 120:
+                        self.framedata.append([self.framecount, "2"])
+                    if event.key == 99:
+                        self.framedata.append([self.framecount, "3"])
+                    if event.key == 118:
+                        self.framedata.append([self.framecount, "4"])
 
 
     def run(self) -> None:
         global deltatime
         self.handle()
+        if self.counting_down == True:
+            if self.n > 5:
+                self.counting_down = False
+                self.store_inputs = True
+                pygame.mixer.music.load(r"comprogIII\rhythm-game\music\Fire_Dance_(Game_Version_-_Vivid_BAD_SQUAD).ogg")
+                pygame.mixer.music.play(-1, self.mtime)
+            if self.mtime > self.start + self.n:
+                print(5 - self.n)
+                self.n += 1
+            
+
         self.print_height = 780
         if self.framedata:
             self.screen.fill([0,0,0])
