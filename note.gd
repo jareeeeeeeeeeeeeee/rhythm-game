@@ -2,13 +2,13 @@ extends Sprite2D
 
 @export_range(1,100)
 var speed = 10
-var lane = randi_range(0,7)
+var lane = randi_range(0,3)
 
 @onready
-var label = get_node("../Background/Label")
+var label = get_node("../Background/NoteHits")
 
 func _init():
-	self.position.x = 415 + lane * 150
+	self.position.x = 715 + lane * 150
 	self.position.y = -30
 	self.add_to_group(str(lane))
 

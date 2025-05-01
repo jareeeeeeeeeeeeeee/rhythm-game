@@ -17,7 +17,7 @@ func _scrol_left():
 		Current_Song -= 1
 		if Current_Song < 0:
 			Current_Song = len(Songs) - 1
-		
+		print("test")
 		
 func _scrol_right():
 	if Input.is_action_just_pressed("Menu Scroll Right"):
