@@ -6,7 +6,7 @@ var note_preload = preload("Note.tscn")
 
 
 
-@onready var label = get_node("./Background/Label")
+@onready var notehits = get_node("./Background/NoteHits")
 @onready var lane1 = get_node("./Background/LightUp1")
 @onready var lane2 = get_node("./Background/LightUp2")
 @onready var lane3 = get_node("./Background/LightUp3")
@@ -16,6 +16,13 @@ var note_preload = preload("Note.tscn")
 #void set_stream(value: AudioStream)
 #AudioStream get_stream()
 
+func note_eval(p):
+	if (p < 70 * G.note_speed) or (p > 900):
+		notehits.notes["bad"] += 1
+	elif (p > 700 and p < 800) or (p > 700 and p < 800):
+		notehits.notes["good"] += 1
+	elif p > 800 and p < 850:
+		notehits.notes["great"] += 1
 
 func _process(dt: float):
 	timer -= 1
@@ -31,28 +38,28 @@ func _process(dt: float):
 func _input(ev):
 	if Input.is_action_just_pressed("button1") and not ev.echo and get_tree().get_nodes_in_group("0"):
 		var hit_note = get_tree().get_nodes_in_group("0")[0]
-		print(hit_note.position.y)
+		note_eval(hit_note.position.y)
 		hit_note.queue_free()
 		lane1.modulate.a = 1
 	elif Input.is_action_just_pressed("button1") and not ev.echo and not get_tree().get_nodes_in_group("0"):
 		lane1.modulate.a = 1
 	if Input.is_action_just_pressed("button2") and not ev.echo and get_tree().get_nodes_in_group("1"):
 		var hit_note = get_tree().get_nodes_in_group("1")[0]
-		print(hit_note.position.y)
+		note_eval(hit_note.position.y)
 		hit_note.queue_free()
 		lane2.modulate.a = 1
 	elif Input.is_action_just_pressed("button2") and not ev.echo and not get_tree().get_nodes_in_group("1"):
 		lane2.modulate.a = 1
 	if Input.is_action_just_pressed("button3") and not ev.echo and get_tree().get_nodes_in_group("2"):
 		var hit_note = get_tree().get_nodes_in_group("2")[0]
-		print(hit_note.position.y)
+		note_eval(hit_note.position.y)
 		hit_note.queue_free()
 		lane3.modulate.a = 1
 	elif Input.is_action_just_pressed("button3") and not ev.echo and not get_tree().get_nodes_in_group("2"):
 		lane3.modulate.a = 1
 	if Input.is_action_just_pressed("button4") and not ev.echo and get_tree().get_nodes_in_group("3"):
 		var hit_note = get_tree().get_nodes_in_group("3")[0]
-		print(hit_note.position.y)
+		note_eval(hit_note.position.y)
 		hit_note.queue_free()
 		lane4.modulate.a = 1
 	elif Input.is_action_just_pressed("button4") and not ev.echo and not get_tree().get_nodes_in_group("3"):
