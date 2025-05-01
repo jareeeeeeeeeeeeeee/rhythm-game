@@ -6,6 +6,9 @@ func _ready() -> void:
 	for image in DirAccess.get_files_at("res://Songlist/"):
 		if str(image).get_slice(".",2) != "import":
 			G.Songs.append(ImageTexture.create_from_image(Image.load_from_file("res://Songlist/" + str(image))))
+	for song in DirAccess.get_files_at("res://music/"):
+		if str(song).get_slice(".",2) != "import":
+			G.Audios.append("res://music/" + str(song))
 
 	
 

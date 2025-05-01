@@ -21,6 +21,11 @@ var note_preload = preload("Note.tscn")
 #AudioStream get_stream()
 
 
+func _ready() -> void:
+	$Audio.stream = load(G.Audios[G.Current_Song])
+	$Audio.play()
+
+@warning_ignore("unused_parameter")
 func _process(dt: float):
 	timer -= 1
 	if timer == 0:
