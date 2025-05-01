@@ -42,9 +42,6 @@ class Game:
                     pygame.mixer.music.unload()
                 elif self.store_inputs:
                     self.framedata.append([self.framecount, event.key])
-                    
-            
-        
 
 
     def run(self) -> None:
