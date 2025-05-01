@@ -4,6 +4,8 @@ var timer = 25
 
 var note_preload = preload("Note.tscn")
 
+
+
 @onready var label = get_node("./Background/Label")
 @onready var lane1 = get_node("./Background/LightUp1")
 @onready var lane2 = get_node("./Background/LightUp2")
@@ -14,6 +16,10 @@ var note_preload = preload("Note.tscn")
 @onready var lane7 = get_node("./Background/LightUp7")
 @onready var lane8 = get_node("./Background/LightUp8")
 @onready var lanes = [lane1, lane2, lane3, lane4, lane5, lane6, lane7, lane8]
+
+#void set_stream(value: AudioStream)
+#AudioStream get_stream()
+
 
 func _process(dt: float):
 	timer -= 1
