@@ -17,12 +17,15 @@ var note_preload = preload("Note.tscn")
 #AudioStream get_stream()
 
 func note_eval(p):
-	if (p < 70 * G.note_speed) or (p > 900):
+	if (p < 70 * G.note_speed) or (p > 90 * G.note_speed):
 		notehits.notes["bad"] += 1
-	elif (p > 700 and p < 800) or (p > 700 and p < 800):
+	elif (p > 70 * G.note_speed and p < 75 * G.note_speed) or (p > 85 * G.note_speed and p < 90 * G.note_speed):
 		notehits.notes["good"] += 1
-	elif p > 800 and p < 850:
+	elif (p > 75 * G.note_speed and p < 79 * G.note_speed) or (p > 81 * G.note_speed and p < 85 * G.note_speed):
 		notehits.notes["great"] += 1
+	elif (p > 79 * G.note_speed and p < 81 * G.note_speed):
+		notehits.notes["perfect"] += 1
+	print(p)
 
 func _process(dt: float):
 	timer -= 1

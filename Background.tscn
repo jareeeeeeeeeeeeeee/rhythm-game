@@ -14,7 +14,7 @@ texture = ExtResource("1_l3thc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.319873, 0.319873, 0.319873, 1)
-position = Vector2(940, 900)
+position = Vector2(940, 800)
 scale = Vector2(9.422, 0.294)
 texture = ExtResource("1_l3thc")
 
