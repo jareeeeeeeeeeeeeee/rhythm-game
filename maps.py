@@ -36,7 +36,6 @@ class Game:
                 print(self.framedata)
                 with open(r"comprogIII\rhythm-game\maps\fire_dance.csv", "w") as csvfile:
                     writer = csv.DictWriter(csvfile, fieldnames=["frame", "lane"])
-                    writer.writeheader()
                     for x in self.framedata:
                         writer.writerow({"frame": x[0], "lane": x[1]})
                 pygame.quit()
@@ -51,13 +50,13 @@ class Game:
                     pygame.mixer.music.unload()
                 elif self.store_inputs:
                     if event.key == 122:
-                        self.framedata.append([self.framecount, "1"])
+                        self.framedata.append([self.framecount, "0"])
                     if event.key == 120:
-                        self.framedata.append([self.framecount, "2"])
+                        self.framedata.append([self.framecount, "1"])
                     if event.key == 99:
-                        self.framedata.append([self.framecount, "3"])
+                        self.framedata.append([self.framecount, "2"])
                     if event.key == 118:
-                        self.framedata.append([self.framecount, "4"])
+                        self.framedata.append([self.framecount, "3"])
 
 
     def run(self) -> None:
@@ -66,6 +65,8 @@ class Game:
         if self.counting_down == True:
             if self.n > 5:
                 self.counting_down = False
+                self.framecount = 0
+                self.mtime = 0
                 self.store_inputs = True
                 pygame.mixer.music.load(r"comprogIII\rhythm-game\music\Fire_Dance_(Game_Version_-_Vivid_BAD_SQUAD).ogg")
                 pygame.mixer.music.play(-1, self.mtime)

@@ -2,9 +2,7 @@ extends Node2D
 
 var timer = 25
 
-var note_preload = preload("Note.tscn")
-
-
+var note = preload("res://Note.tscn")
 
 @onready var notehits = get_node("./Background/NoteHits")
 @onready var lane1 = get_node("./Background/LightUp1")
@@ -13,6 +11,11 @@ var note_preload = preload("Note.tscn")
 @onready var lane4 = get_node("./Background/LightUp4")
 @onready var lanes = [lane1, lane2, lane3, lane4]
 
+var chart = "res://maps/fire_dance.csv"
+
+var current_note = 0
+var frame = 0
+var map = _open_file(chart)
 #void set_stream(value: AudioStream)
 #AudioStream get_stream()
 
@@ -30,15 +33,23 @@ func note_eval(p):
 func _ready() -> void:
 	$Audio.stream = load(G.Audios[G.Current_Song])
 	$Audio.play()
+	
+	print(map)
+	
+	
+func _create_note(lane):
+	print(typeof(note))
+	var created_note = note.instantiate(lane)
+	add_child(created_note)
+	created_note._assign_lane(lane)
 
 @warning_ignore("unused_parameter")
 func _process(dt: float):
-	timer -= 1
-	if timer == 0:
-		timer = 25
-		var note = note_preload.instantiate()
-		add_child(note)
-	
+	frame += 1
+	if frame == int(map[current_note][0]):
+		_create_note(int(map[current_note][1]))
+		current_note += 1
+		
 	for lane in lanes:
 		if lane.modulate.a > 0:
 			lane.modulate.a -= 0.1
@@ -76,3 +87,10 @@ func _input(ev):
 		lane4.modulate.a = 1
 	elif Input.is_action_just_pressed("button4") and not ev.echo and not get_tree().get_nodes_in_group("3"):
 		lane4.modulate.a = 1
+
+func _open_file(file):
+	var f = FileAccess.open(file, FileAccess.READ)
+	var content = []
+	while not f.eof_reached():
+		content.append(f.get_csv_line())
+	return content

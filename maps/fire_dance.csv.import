@@ -6,10 +6,10 @@ uid="uid://cwd2y0qnv0hb6"
 
 [deps]
 
-files=["res://maps/fire_dance.lane.translation"]
+files=["res://maps/fire_dance.0.translation"]
 
 source_file="res://maps/fire_dance.csv"
-dest_files=["res://maps/fire_dance.lane.translation"]
+dest_files=["res://maps/fire_dance.0.translation"]
 
 [params]
 
