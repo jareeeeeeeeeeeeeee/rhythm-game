@@ -55,33 +55,33 @@ texture = ExtResource("1_l3thc")
 
 [node name="LightUp1" type="Sprite2D" parent="."]
 modulate = Color(0.435294, 0.435294, 0.435294, 0)
-position = Vector2(715, 540)
-scale = Vector2(2.25, 16.875)
+position = Vector2(715, 720)
+scale = Vector2(2.25, 22.5)
 texture = ExtResource("1_l3thc")
 
 [node name="LightUp2" type="Sprite2D" parent="."]
 modulate = Color(0.435294, 0.435294, 0.435294, 0)
-position = Vector2(865, 540)
-scale = Vector2(2.25, 16.875)
+position = Vector2(865, 720)
+scale = Vector2(2.25, 22.5)
 texture = ExtResource("1_l3thc")
 
 [node name="LightUp3" type="Sprite2D" parent="."]
 modulate = Color(0.435294, 0.435294, 0.435294, 0)
-position = Vector2(1015, 540)
-scale = Vector2(2.25, 16.875)
+position = Vector2(1015, 720)
+scale = Vector2(2.25, 22.5)
 texture = ExtResource("1_l3thc")
 
 [node name="LightUp4" type="Sprite2D" parent="."]
 modulate = Color(0.435294, 0.435294, 0.435294, 0)
-position = Vector2(1165, 540)
-scale = Vector2(2.25, 16.875)
+position = Vector2(1165, 720)
+scale = Vector2(2.25, 22.5)
 texture = ExtResource("1_l3thc")
 
 [node name="NoteHits" type="Label" parent="."]
-offset_left = 1497.0
-offset_top = 602.0
-offset_right = 1557.0
-offset_bottom = 729.0
+offset_left = 1533.0
+offset_top = 604.0
+offset_right = 1593.0
+offset_bottom = 731.0
 scale = Vector2(2, 2)
 text = "Perfect:
 Great:
