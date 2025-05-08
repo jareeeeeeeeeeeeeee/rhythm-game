@@ -8,13 +8,13 @@
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.272047, 0.272047, 0.272047, 1)
-position = Vector2(960, 540)
-scale = Vector2(30, 16.875)
+position = Vector2(960, 720)
+scale = Vector2(30, 22.5)
 texture = ExtResource("1_l3thc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.319873, 0.319873, 0.319873, 1)
-position = Vector2(940, 800)
+position = Vector2(940, 1100)
 scale = Vector2(9.422, 0.294)
 texture = ExtResource("1_l3thc")
 
@@ -24,57 +24,33 @@ scale = Vector2(0.995, 0.85)
 texture = ExtResource("1_l3thc")
 
 [node name="Lane1" type="Sprite2D" parent="."]
-modulate = Color(0.101961, 0.101961, 0.101961, 0)
-position = Vector2(340, 540)
-scale = Vector2(0.078, 16.875)
+modulate = Color(0, 0, 0, 1)
+position = Vector2(640, 720)
+scale = Vector2(0.078, 22.5)
 texture = ExtResource("1_l3thc")
 
 [node name="Lane2" type="Sprite2D" parent="."]
-modulate = Color(0.101961, 0.101961, 0.101961, 0)
-position = Vector2(490, 540)
-scale = Vector2(0.078, 16.875)
+modulate = Color(0.101961, 0.101961, 0.101961, 1)
+position = Vector2(790, 720)
+scale = Vector2(0.078, 22.5)
 texture = ExtResource("1_l3thc")
 
 [node name="Lane3" type="Sprite2D" parent="."]
 modulate = Color(0.103744, 0.103744, 0.103744, 1)
-position = Vector2(640, 540)
-scale = Vector2(0.078, 16.875)
+position = Vector2(940, 720)
+scale = Vector2(0.078, 22.5)
 texture = ExtResource("1_l3thc")
 
 [node name="Lane4" type="Sprite2D" parent="."]
 modulate = Color(0.103744, 0.103744, 0.103744, 1)
-position = Vector2(790, 540)
-scale = Vector2(0.078, 16.875)
+position = Vector2(1090, 720)
+scale = Vector2(0.078, 22.5)
 texture = ExtResource("1_l3thc")
 
 [node name="Lane5" type="Sprite2D" parent="."]
 modulate = Color(0.103744, 0.103744, 0.103744, 1)
-position = Vector2(940, 540)
-scale = Vector2(0.078, 16.875)
-texture = ExtResource("1_l3thc")
-
-[node name="Lane6" type="Sprite2D" parent="."]
-modulate = Color(0.103744, 0.103744, 0.103744, 1)
-position = Vector2(1090, 540)
-scale = Vector2(0.078, 16.875)
-texture = ExtResource("1_l3thc")
-
-[node name="Lane7" type="Sprite2D" parent="."]
-modulate = Color(0.103744, 0.103744, 0.103744, 1)
-position = Vector2(1240, 540)
-scale = Vector2(0.078, 16.875)
-texture = ExtResource("1_l3thc")
-
-[node name="Lane8" type="Sprite2D" parent="."]
-modulate = Color(0.101961, 0.101961, 0.101961, 0)
-position = Vector2(1390, 540)
-scale = Vector2(0.078, 16.875)
-texture = ExtResource("1_l3thc")
-
-[node name="Lane9" type="Sprite2D" parent="."]
-modulate = Color(0.101961, 0.101961, 0.101961, 0)
-position = Vector2(1540, 540)
-scale = Vector2(0.078, 16.875)
+position = Vector2(1240, 720)
+scale = Vector2(0.078, 22.5)
 texture = ExtResource("1_l3thc")
 
 [node name="LightUp1" type="Sprite2D" parent="."]
@@ -102,10 +78,10 @@ scale = Vector2(2.25, 16.875)
 texture = ExtResource("1_l3thc")
 
 [node name="NoteHits" type="Label" parent="."]
-offset_left = 1528.0
-offset_top = 386.0
-offset_right = 1588.0
-offset_bottom = 513.0
+offset_left = 1497.0
+offset_top = 602.0
+offset_right = 1557.0
+offset_bottom = 729.0
 scale = Vector2(2, 2)
 text = "Perfect:
 Great:
@@ -117,10 +93,10 @@ vertical_alignment = 1
 script = ExtResource("2_dpw2a")
 
 [node name="Combo" type="Label" parent="."]
-offset_left = 254.0
-offset_top = 446.0
-offset_right = 294.0
-offset_bottom = 469.0
+offset_left = 265.0
+offset_top = 662.0
+offset_right = 305.0
+offset_bottom = 685.0
 scale = Vector2(3, 3)
 horizontal_alignment = 1
 script = ExtResource("3_jqsg2")
