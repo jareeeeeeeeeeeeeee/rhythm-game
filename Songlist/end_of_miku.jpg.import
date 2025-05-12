@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgh0qi3qskdp7"
-path="res://.godot/imported/fire_dance.jpeg-a87238a742b488a7f0f9788b5179a8d3.ctex"
+uid="uid://cs1jo6qgkb7ay"
+path="res://.godot/imported/end_of_miku.jpg-646dbce905a30ec78dd20f114aa2e7a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Songlist/fire_dance.jpeg"
-dest_files=["res://.godot/imported/fire_dance.jpeg-a87238a742b488a7f0f9788b5179a8d3.ctex"]
+source_file="res://Songlist/end_of_miku.jpg"
+dest_files=["res://.godot/imported/end_of_miku.jpg-646dbce905a30ec78dd20f114aa2e7a6.ctex"]
 
 [params]
 

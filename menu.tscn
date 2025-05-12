@@ -1,31 +1,48 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkfank2crghqe"]
+[gd_scene load_steps=7 format=3 uid="uid://bkfank2crghqe"]
 
 [ext_resource type="Script" uid="uid://dnxnxr0pr8sam" path="res://button.gd" id="1_4hy44"]
 [ext_resource type="Script" uid="uid://pkix8mb2cjlk" path="res://menu.gd" id="1_l48gv"]
 [ext_resource type="Texture2D" uid="uid://dm78dcql11ck6" path="res://Songlist/mcls.jpg" id="2_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://cvje11umbax1x" path="res://Songlist/1ln.jpg" id="3_l48gv"]
 [ext_resource type="Texture2D" uid="uid://b51noukqe8hfp" path="res://Songlist/donfai.jpg" id="4_ecwwl"]
+[ext_resource type="Script" uid="uid://l26r8pdyvh82" path="res://label.gd" id="6_l48gv"]
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_l48gv")
 
 [node name="Play_button" type="Button" parent="."]
-offset_left = 402.0
-offset_top = 373.0
-offset_right = 410.0
-offset_bottom = 381.0
+offset_left = 888.0
+offset_top = 875.0
+offset_right = 896.0
+offset_bottom = 883.0
 script = ExtResource("1_4hy44")
 
 [node name="Selected" type="Sprite2D" parent="."]
-position = Vector2(579, 180)
+position = Vector2(960, 600)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_ytr4m")
 
 [node name="Right" type="Sprite2D" parent="."]
-position = Vector2(937, 185)
+position = Vector2(1300, 600)
+texture = ExtResource("3_l48gv")
+
+[node name="Right2" type="Sprite2D" parent="."]
+position = Vector2(1550, 600)
 scale = Vector2(0.793333, 0.833333)
 texture = ExtResource("3_l48gv")
 
 [node name="Left" type="Sprite2D" parent="."]
-position = Vector2(203, 194)
+position = Vector2(620, 600)
+texture = ExtResource("4_ecwwl")
+
+[node name="Left2" type="Sprite2D" parent="."]
+position = Vector2(370, 600)
 scale = Vector2(0.833333, 0.811111)
 texture = ExtResource("4_ecwwl")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 960.0
+offset_top = 800.0
+offset_right = 1000.0
+offset_bottom = 823.0
+script = ExtResource("6_l48gv")

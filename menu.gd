@@ -1,7 +1,5 @@
 extends Node2D
 
-
-
 func _ready() -> void:
 	for image in DirAccess.get_files_at("res://Songlist/"):
 		if str(image).get_slice(".",2) != "import":
@@ -32,9 +30,15 @@ func _process(delta: float) -> void:
 	_scrol_left()
 	_scrol_right()
 	$Left.texture = G.Songs[G.Current_Song - 1]
+	$Left2.texture = G.Songs[G.Current_Song - 2]
 	$Selected.texture = G.Songs[G.Current_Song]
-	if G.Current_Song < len(G.Songs) - 1:
+	if G.Current_Song < len(G.Songs) - 2:
 		$Right.texture = G.Songs[G.Current_Song + 1]
+		$Right2.texture = G.Songs[G.Current_Song + 2]
+	elif G.Current_Song < len(G.Songs) - 1:
+		$Right.texture = G.Songs[-1]
+		$Right2.texture = G.Songs[0]
 	elif G.Current_Song == len(G.Songs) - 1:
 		$Right.texture = G.Songs[0]
+		$Right2.texture = G.Songs[1]
 	
