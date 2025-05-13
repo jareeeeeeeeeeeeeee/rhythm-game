@@ -17,19 +17,9 @@ func _ready():
 	for image in DirAccess.get_files_at("res://Songlist/"):
 		if image != image.trim_suffix(".jpg"):
 			songlist.append(image.trim_suffix(".jpg"))
-	text = songtranslator.get(songlist[G.Current_Song])
-
-func _scrol_left():
-	if Input.is_action_just_pressed("Menu Scroll Left"):
-		text = songtranslator.get(songlist[G.Current_Song])
-		
-		
-func _scrol_right():
-	if Input.is_action_just_pressed("Menu Scroll Right"):
-		text = songtranslator.get(songlist[G.Current_Song])
-
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
-	_scrol_left()
-	_scrol_right()
+	text = songtranslator.get(songlist[G.Current_Song])
+	self.size = Vector2(1,1)
+	self.position.x = 960 - self.size.x/2
