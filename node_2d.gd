@@ -11,9 +11,6 @@ var note = preload("res://Note.tscn")
 @onready var lane4 = get_node("./Background/LightUp4")
 @onready var lanes = [lane1, lane2, lane3, lane4]
 
-
-<<<<<<< HEAD
-
 var charts = {
 	"1ln": "1ln.csv",
 	"donfai": "donfai.csv",
@@ -24,14 +21,10 @@ var charts = {
 	"miku": "miku.csv",
 	"smile_symphony": "smile_symphony.csv"
 }
-var current_note = 0
+
 var frame = 0
 var map = _open_file(charts[G.songlist[G.Current_Song]])
-=======
-var frame = 0
-var map = _open_file(chart)
 var notes = {}
->>>>>>> 5ede627fd2b40a65bed4443f52dd4d905cfb1e48
 #void set_stream(value: AudioStream)
 #AudioStream get_stream()
 
