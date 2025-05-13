@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dm78dcql11ck6" path="res://Songlist/mcls.jpg" id="2_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://cvje11umbax1x" path="res://Songlist/1ln.jpg" id="3_l48gv"]
 [ext_resource type="Texture2D" uid="uid://b51noukqe8hfp" path="res://Songlist/donfai.jpg" id="4_ecwwl"]
-[ext_resource type="Script" uid="uid://l26r8pdyvh82" path="res://label.gd" id="6_l48gv"]
+[ext_resource type="Script" path="res://label.gd" id="6_l48gv"]
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_l48gv")
