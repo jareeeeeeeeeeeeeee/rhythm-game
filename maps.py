@@ -5,6 +5,9 @@ import csv
 from collections import defaultdict as ddict
 from typing import Self
 
+file = "comprogIII\\rhythm-game\\maps\\fire_dance.csv"
+song = "comprogIII\\rhythm-game\\music\\firedance.ogg"
+
 class Game:
     
     WIDTH: int = 800
@@ -34,7 +37,7 @@ class Game:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 print(self.framedata)
-                with open(r"comprogIII\rhythm-game\maps\fire_dance.csv", "w") as csvfile:
+                with open(f"{file}", "w") as csvfile:
                     writer = csv.DictWriter(csvfile, fieldnames=["frame", "lane"])
                     for x in self.framedata:
                         writer.writerow({"frame": x[0], "lane": x[1]})
@@ -68,7 +71,7 @@ class Game:
                 self.framecount = 0
                 self.mtime = 0
                 self.store_inputs = True
-                pygame.mixer.music.load(r"comprogIII\rhythm-game\music\Fire_Dance_(Game_Version_-_Vivid_BAD_SQUAD).ogg")
+                pygame.mixer.music.load(f"{song}")
                 pygame.mixer.music.play(-1, self.mtime)
             if self.mtime > self.start + self.n:
                 print(5 - self.n)
