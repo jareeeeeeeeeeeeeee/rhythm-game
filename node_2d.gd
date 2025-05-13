@@ -13,9 +13,9 @@ var note = preload("res://Note.tscn")
 
 var chart = "res://maps/fire_dance.csv"
 
-var current_note = 0
 var frame = 0
 var map = _open_file(chart)
+var notes = {}
 #void set_stream(value: AudioStream)
 #AudioStream get_stream()
 
@@ -39,6 +39,15 @@ func _ready() -> void:
 	$Audio.play()
 	
 	print(map)
+	map.pop_at(len(map) - 1)
+	for note in map:
+		print(note)
+		if str(note[0]) not in notes.keys():
+			notes[note[0]] = [note[1]]
+		else:
+			notes[note[0]].append(note[1])
+	print(notes)
+	
 	
 	
 func _create_note(lane):
@@ -50,9 +59,10 @@ func _create_note(lane):
 @warning_ignore("unused_parameter")
 func _process(dt: float):
 	frame += 1
-	if frame == int(map[current_note][0]):
-		_create_note(int(map[current_note][1]))
-		current_note += 1
+	
+	if str(frame) in notes.keys():
+		for note in notes[str(frame)]:
+			_create_note(int(note))
 		
 	for lane in lanes:
 		if lane.modulate.a > 0:
