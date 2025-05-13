@@ -16,7 +16,7 @@ func _assign_lane(lane):
 
 func _process(dt: float):
 		self.position.y += G.note_speed
-		if self.position.y >= 1440:
+		if self.position.y >= 1080:
 			notehits.notes["miss"] += 1
 			G.combo = 0
 			queue_free()

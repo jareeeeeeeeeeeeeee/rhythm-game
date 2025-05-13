@@ -19,20 +19,20 @@ var map = _open_file(chart)
 #void set_stream(value: AudioStream)
 #AudioStream get_stream()
 
-func note_eval(p):
-	if (p < 935) or (p > 1265):
+func note_eval(note, p):
+	if (p < 775) or (p > 1015):
 		notehits.notes["bad"] += 1
 		G.combo = 0
-	elif (p > 935 and p < 995) or (p > 1205 and p < 1265):
+	elif (p > 775 and p < 835) or (p > 965 and p < 1015):
 		notehits.notes["good"] += 1
 		G.combo = 0
-	elif (p > 995 and p < 1045) or (p > 1155 and p < 1205):
+	elif (p > 835 and p < 875) or (p > 925 and p < 965):
 		notehits.notes["great"] += 1
 		G.combo += 1
-	elif (p > 1045 and p < 1155):
+	elif (p > 875 and p < 925):
 		notehits.notes["perfect"] += 1
 		G.combo += 1
-	print(p)
+	note.free()
 
 func _ready() -> void:
 	$Audio.stream = load(G.Audios[G.Current_Song])
@@ -61,33 +61,29 @@ func _process(dt: float):
 func _input(ev):
 	if Input.is_action_just_pressed("button1") and not ev.echo and get_tree().get_nodes_in_group("0"):
 		var hit_note = get_tree().get_nodes_in_group("0")[0]
-		if hit_note.position.y > 650:
-			note_eval(hit_note.position.y)
-			hit_note.free()
+		if hit_note.position.y > 695:
+			note_eval(hit_note, hit_note.position.y)
 		lane1.modulate.a = 1
 	elif Input.is_action_just_pressed("button1") and not ev.echo and not get_tree().get_nodes_in_group("0"):
 		lane1.modulate.a = 1
 	if Input.is_action_just_pressed("button2") and not ev.echo and get_tree().get_nodes_in_group("1"):
 		var hit_note = get_tree().get_nodes_in_group("1")[0]
-		if hit_note.position.y > 650:
-			note_eval(hit_note.position.y)
-			hit_note.free()
+		if hit_note.position.y > 695:
+			note_eval(hit_note, hit_note.position.y)
 		lane2.modulate.a = 1
 	elif Input.is_action_just_pressed("button2") and not ev.echo and not get_tree().get_nodes_in_group("1"):
 		lane2.modulate.a = 1
 	if Input.is_action_just_pressed("button3") and not ev.echo and get_tree().get_nodes_in_group("2"):
 		var hit_note = get_tree().get_nodes_in_group("2")[0]
-		if hit_note.position.y > 650:
-			note_eval(hit_note.position.y)
-			hit_note.free()
+		if hit_note.position.y > 695:
+			note_eval(hit_note, hit_note.position.y)
 		lane3.modulate.a = 1
 	elif Input.is_action_just_pressed("button3") and not ev.echo and not get_tree().get_nodes_in_group("2"):
 		lane3.modulate.a = 1
 	if Input.is_action_just_pressed("button4") and not ev.echo and get_tree().get_nodes_in_group("3"):
 		var hit_note = get_tree().get_nodes_in_group("3")[0]
-		if hit_note.position.y > 650:
-			note_eval(hit_note.position.y)
-			hit_note.free()
+		if hit_note.position.y > 695:
+			note_eval(hit_note, hit_note.position.y)
 		lane4.modulate.a = 1
 	elif Input.is_action_just_pressed("button4") and not ev.echo and not get_tree().get_nodes_in_group("3"):
 		lane4.modulate.a = 1
