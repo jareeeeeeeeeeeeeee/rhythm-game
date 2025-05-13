@@ -53,13 +53,13 @@ class Game:
                     self.store_inputs = False
                     pygame.mixer.music.unload()
                 elif self.store_inputs:
-                    if event.key == 97:
-                        self.framedata.append([self.framecount, "0"])
-                    if event.key == 115:
-                        self.framedata.append([self.framecount, "1"])
                     if event.key == 100:
-                        self.framedata.append([self.framecount, "2"])
+                        self.framedata.append([self.framecount, "0"])
                     if event.key == 102:
+                        self.framedata.append([self.framecount, "1"])
+                    if event.key == 106:
+                        self.framedata.append([self.framecount, "2"])
+                    if event.key == 107:
                         self.framedata.append([self.framecount, "3"])
 
 

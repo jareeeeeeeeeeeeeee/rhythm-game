@@ -12,6 +12,7 @@ var note = preload("res://Note.tscn")
 @onready var lanes = [lane1, lane2, lane3, lane4]
 
 
+<<<<<<< HEAD
 
 var charts = {
 	"1ln": "1ln.csv",
@@ -26,6 +27,11 @@ var charts = {
 var current_note = 0
 var frame = 0
 var map = _open_file(charts[G.songlist[G.Current_Song]])
+=======
+var frame = 0
+var map = _open_file(chart)
+var notes = {}
+>>>>>>> 5ede627fd2b40a65bed4443f52dd4d905cfb1e48
 #void set_stream(value: AudioStream)
 #AudioStream get_stream()
 
@@ -49,6 +55,15 @@ func _ready() -> void:
 	$Audio.play()
 	
 	print(map)
+	map.pop_at(len(map) - 1)
+	for note in map:
+		print(note)
+		if str(note[0]) not in notes.keys():
+			notes[note[0]] = [note[1]]
+		else:
+			notes[note[0]].append(note[1])
+	print(notes)
+	
 	
 	
 func _create_note(lane):
@@ -60,9 +75,10 @@ func _create_note(lane):
 @warning_ignore("unused_parameter")
 func _process(dt: float):
 	frame += 1
-	if frame == int(map[current_note][0]):
-		_create_note(int(map[current_note][1]))
-		current_note += 1
+	
+	if str(frame) in notes.keys():
+		for note in notes[str(frame)]:
+			_create_note(int(note))
 		
 	for lane in lanes:
 		if lane.modulate.a > 0:
