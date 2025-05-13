@@ -1,7 +1,5 @@
 extends Label
 
-var songlist = []
-
 var songtranslator = {
 	"1ln": "「１」",
 	"donfai": "Don't Fight the Music",
@@ -16,10 +14,10 @@ var songtranslator = {
 func _ready():
 	for image in DirAccess.get_files_at("res://Songlist/"):
 		if image != image.trim_suffix(".jpg"):
-			songlist.append(image.trim_suffix(".jpg"))
+			G.songlist.append(image.trim_suffix(".jpg"))
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
-	text = songtranslator.get(songlist[G.Current_Song])
+	text = songtranslator.get(G.songlist[G.Current_Song])
 	self.size = Vector2(1,1)
 	self.position.x = 960 - self.size.x/2

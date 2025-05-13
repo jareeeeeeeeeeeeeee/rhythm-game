@@ -2,7 +2,7 @@ extends Node2D
 
 var Songs = []
 
-var Songlist = []
+var songlist = []
 
 var Audios = []
 

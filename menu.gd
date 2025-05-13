@@ -8,9 +8,6 @@ func _ready() -> void:
 		if str(song).get_slice(".",2) != "import":
 			G.Audios.append("res://music/" + str(song))
 
-	
-
-
 func _scrol_left():
 	if Input.is_action_just_pressed("Menu Scroll Left"):
 		G.Current_Song -= 1
