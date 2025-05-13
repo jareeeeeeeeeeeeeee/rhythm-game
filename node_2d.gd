@@ -59,35 +59,31 @@ func _process(dt: float):
 			lane.modulate.a -= 0.1
 
 func _input(ev):
-	if Input.is_action_just_pressed("button1") and not ev.echo and get_tree().get_nodes_in_group("0"):
-		var hit_note = get_tree().get_nodes_in_group("0")[0]
-		if hit_note.position.y > 695:
-			note_eval(hit_note, hit_note.position.y)
+	if Input.is_action_just_pressed("button1") and not ev.echo:
 		lane1.modulate.a = 1
-	elif Input.is_action_just_pressed("button1") and not ev.echo and not get_tree().get_nodes_in_group("0"):
-		lane1.modulate.a = 1
-	if Input.is_action_just_pressed("button2") and not ev.echo and get_tree().get_nodes_in_group("1"):
-		var hit_note = get_tree().get_nodes_in_group("1")[0]
-		if hit_note.position.y > 695:
-			note_eval(hit_note, hit_note.position.y)
+		if get_tree().get_nodes_in_group("0"):
+			var hit_note = get_tree().get_nodes_in_group("0")[0]
+			if hit_note.position.y > 695:
+				note_eval(hit_note, hit_note.position.y)
+	if Input.is_action_just_pressed("button2") and not ev.echo:
 		lane2.modulate.a = 1
-	elif Input.is_action_just_pressed("button2") and not ev.echo and not get_tree().get_nodes_in_group("1"):
-		lane2.modulate.a = 1
-	if Input.is_action_just_pressed("button3") and not ev.echo and get_tree().get_nodes_in_group("2"):
-		var hit_note = get_tree().get_nodes_in_group("2")[0]
-		if hit_note.position.y > 695:
-			note_eval(hit_note, hit_note.position.y)
+		if get_tree().get_nodes_in_group("1"):
+			var hit_note = get_tree().get_nodes_in_group("1")[0]
+			if hit_note.position.y > 695:
+				note_eval(hit_note, hit_note.position.y)
+	if Input.is_action_just_pressed("button3") and not ev.echo:
 		lane3.modulate.a = 1
-	elif Input.is_action_just_pressed("button3") and not ev.echo and not get_tree().get_nodes_in_group("2"):
-		lane3.modulate.a = 1
-	if Input.is_action_just_pressed("button4") and not ev.echo and get_tree().get_nodes_in_group("3"):
-		var hit_note = get_tree().get_nodes_in_group("3")[0]
-		if hit_note.position.y > 695:
-			note_eval(hit_note, hit_note.position.y)
+		if get_tree().get_nodes_in_group("2"):
+			var hit_note = get_tree().get_nodes_in_group("2")[0]
+			if hit_note.position.y > 695:
+				note_eval(hit_note, hit_note.position.y)
+	if Input.is_action_just_pressed("button4") and not ev.echo:
 		lane4.modulate.a = 1
-	elif Input.is_action_just_pressed("button4") and not ev.echo and not get_tree().get_nodes_in_group("3"):
-		lane4.modulate.a = 1
-
+		if get_tree().get_nodes_in_group("3"):
+			var hit_note = get_tree().get_nodes_in_group("3")[0]
+			if hit_note.position.y > 695:
+				note_eval(hit_note, hit_note.position.y)
+	
 func _open_file(file):
 	var f = FileAccess.open(file, FileAccess.READ)
 	var content = []
