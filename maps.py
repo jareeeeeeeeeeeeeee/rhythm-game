@@ -44,6 +44,7 @@ class Game:
                 pygame.quit()
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
+                print(event.key)
                 if event.key == 32:
                     self.counting_down = True
                     self.start = self.mtime
@@ -52,13 +53,13 @@ class Game:
                     self.store_inputs = False
                     pygame.mixer.music.unload()
                 elif self.store_inputs:
-                    if event.key == 122:
+                    if event.key == 97:
                         self.framedata.append([self.framecount, "0"])
-                    if event.key == 120:
+                    if event.key == 115:
                         self.framedata.append([self.framecount, "1"])
-                    if event.key == 99:
+                    if event.key == 100:
                         self.framedata.append([self.framecount, "2"])
-                    if event.key == 118:
+                    if event.key == 102:
                         self.framedata.append([self.framecount, "3"])
 
 

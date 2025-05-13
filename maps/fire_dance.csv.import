@@ -3,13 +3,11 @@
 importer="csv_translation"
 type="Translation"
 uid="uid://cwd2y0qnv0hb6"
+valid=false
 
 [deps]
 
-files=["res://maps/fire_dance.0.translation"]
-
 source_file="res://maps/fire_dance.csv"
-dest_files=["res://maps/fire_dance.0.translation"]
 
 [params]
 
