@@ -12,14 +12,14 @@ var note = preload("res://Note.tscn")
 @onready var lanes = [lane1, lane2, lane3, lane4]
 
 var charts = {
-	"1ln": "1ln.csv",
-	"donfai": "donfai.csv",
-	"dune": "dune.csv",
-	"end_of_miku": "end_of_miku.csv",
-	"fire_dance": "fire_dance.csv",
-	"mcls": "mcls.csv",
-	"miku": "miku.csv",
-	"smile_symphony": "smile_symphony.csv"
+	"1ln": "./maps/1ln.csv",
+	"donfai": "./maps/donfai.csv",
+	"dune": "./maps/dune.csv",
+	"end_of_miku": "./maps/end_of_miku.csv",
+	"fire_dance": "./maps/fire_dance.csv",
+	"mcls": "./maps/mcls.csv",
+	"miku": "./maps/miku.csv",
+	"smile_symphony": "./maps/smile_symphony.csv"
 }
 
 var frame = 0
@@ -32,6 +32,10 @@ func note_eval(note, p):
 	if (p < 775) or (p > 1015):
 		notehits.notes["bad"] += 1
 		G.combo = 0
+		if G.life >= 50:
+			G.life -= 50
+		else:
+			G.life = 0
 	elif (p > 775 and p < 835) or (p > 965 and p < 1015):
 		notehits.notes["good"] += 1
 		G.combo = 0

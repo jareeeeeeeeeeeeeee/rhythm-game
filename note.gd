@@ -19,4 +19,8 @@ func _process(dt: float):
 		if self.position.y >= 1080:
 			notehits.notes["miss"] += 1
 			G.combo = 0
+			if G.life >= 80:
+				G.life -= 80
+			else:
+				G.life = 0
 			queue_free()
