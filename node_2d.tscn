@@ -12,3 +12,5 @@ script = ExtResource("1_epypp")
 [node name="Audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_epypp")
 autoplay = true
+
+[connection signal="finished" from="Audio" to="." method="_on_audio_finished"]

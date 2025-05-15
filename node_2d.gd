@@ -82,6 +82,11 @@ func _process(dt: float):
 	for lane in lanes:
 		if lane.modulate.a > 0:
 			lane.modulate.a -= 0.1
+	#if $Audio.finished:
+		#print("yay")
+		#countdown -= 1
+		#if countdown == 0:
+			#get_tree().change_scene_to_file("res://menu.tscn")
 
 func _input(ev):
 	if Input.is_action_just_pressed("button1") and not ev.echo:
@@ -115,3 +120,7 @@ func _open_file(file):
 	while not f.eof_reached():
 		content.append(f.get_csv_line())
 	return content
+
+
+func _on_audio_finished() -> void:
+	get_tree().change_scene_to_file("res://menu.tscn")
