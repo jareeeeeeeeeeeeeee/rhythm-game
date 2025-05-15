@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://x87muoju6usm"
+
+[deps]
+
+files=["res://maps/end_of_miku.2.translation"]
+
+source_file="res://maps/end_of_miku.csv"
+dest_files=["res://maps/end_of_miku.2.translation"]
+
+[params]
+
+compress=true
+delimiter=0
