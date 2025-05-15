@@ -22,24 +22,25 @@ var charts = {
 	"smile_symphony": "./maps/smile_symphony.csv"
 }
 
-var frame = 0
+var frame = 10
 var map = _open_file(charts[G.songlist[G.Current_Song]])
 var notes = {}
 #void set_stream(value: AudioStream)
 #AudioStream get_stream()
 
 func note_eval(note, p):
-	if (p < 775) or (p > 1015):
+	if (p < 795) or (p > 995):
 		notehits.notes["bad"] += 1
 		G.combo = 0
 		if G.life >= 50:
 			G.life -= 50
 		else:
 			G.life = 0
-	elif (p > 775 and p < 835) or (p > 965 and p < 1015):
+			
+	elif (p > 795 and p < 845) or (p > 955 and p < 995):
 		notehits.notes["good"] += 1
 		G.combo = 0
-	elif (p > 835 and p < 875) or (p > 925 and p < 965):
+	elif (p > 845 and p < 875) or (p > 925 and p < 955):
 		notehits.notes["great"] += 1
 		G.combo += 1
 	elif (p > 875 and p < 925):
