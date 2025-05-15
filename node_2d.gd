@@ -32,8 +32,8 @@ func note_eval(note, p):
 	if (p < 795) or (p > 995):
 		notehits.notes["bad"] += 1
 		G.combo = 0
-		if G.life >= 50:
-			G.life -= 50
+		if G.life >= 20:
+			G.life -= 20
 		else:
 			G.life = 0
 			
