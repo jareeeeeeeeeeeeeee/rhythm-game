@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cptbgk51hs72i"
+
+[deps]
+
+files=["res://maps/dune.2.translation"]
+
+source_file="res://maps/dune.csv"
+dest_files=["res://maps/dune.2.translation"]
+
+[params]
+
+compress=true
+delimiter=0
