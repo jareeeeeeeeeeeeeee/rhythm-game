@@ -50,6 +50,7 @@ func note_eval(note, p):
 
 func _ready() -> void:
 	$Audio.stream = load(G.Audios[G.Current_Song])
+	await get_tree().create_timer(2.0).timeout
 	$Audio.play()
 	
 	print(map)
