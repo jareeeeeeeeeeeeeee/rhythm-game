@@ -5,8 +5,8 @@ import csv
 from collections import defaultdict as ddict
 from typing import Self
 
-file = "comprogIII\\rhythm-game\\maps\\fire_dance.csv"
-song = "comprogIII\\rhythm-game\\music\\firedance.ogg"
+file = "maps/fire_dance.csv"
+song = "music/firedance.ogg"
 
 class Game:
     
