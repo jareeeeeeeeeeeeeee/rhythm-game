@@ -22,7 +22,7 @@ var charts = {
 	"smile_symphony": "./maps/smile_symphony.csv"
 }
 
-var frame = 10
+var frame = 90
 var map = _open_file(charts[G.songlist[G.Current_Song]])
 var notes = {}
 #void set_stream(value: AudioStream)
@@ -50,7 +50,7 @@ func note_eval(note, p):
 
 func _ready() -> void:
 	$Audio.stream = load(G.Audios[G.Current_Song])
-	await get_tree().create_timer(2.0).timeout
+	#await get_tree().create_timer(2).timeout
 	$Audio.play()
 	
 	print(map)

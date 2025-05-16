@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b5h7ki47olxyg"
+valid=false
+
+[deps]
+
+source_file="res://maps/smilesymphony.csv"
+
+[params]
+
+compress=true
+delimiter=0
