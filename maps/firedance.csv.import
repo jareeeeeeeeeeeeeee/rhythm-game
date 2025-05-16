@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://2pge33hsurl1"
+
+[deps]
+
+files=["res://maps/firedance.0.translation"]
+
+source_file="res://maps/firedance.csv"
+dest_files=["res://maps/firedance.0.translation"]
+
+[params]
+
+compress=true
+delimiter=0

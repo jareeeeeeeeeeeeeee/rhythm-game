@@ -2,12 +2,14 @@
 
 importer="csv_translation"
 type="Translation"
-uid="uid://b5h7ki47olxyg"
-valid=false
+uid="uid://caj0pjerkaq02"
 
 [deps]
 
+files=["res://maps/smilesymphony.1.translation"]
+
 source_file="res://maps/smilesymphony.csv"
+dest_files=["res://maps/smilesymphony.1.translation"]
 
 [params]
 
