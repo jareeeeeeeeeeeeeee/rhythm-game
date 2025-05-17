@@ -16,10 +16,10 @@ var charts = {
 	"donfai": "./maps/donfai.csv",
 	"dune": "./maps/dune.csv",
 	"end_of_miku": "./maps/end_of_miku.csv",
-	"fire_dance": "./maps/fire_dance.csv",
+	"fire_dance": "./maps/firedance.csv",
 	"mcls": "./maps/mcls.csv",
 	"miku": "./maps/miku.csv",
-	"smile_symphony": "./maps/smile_symphony.csv"
+	"smile_symphony": "./maps/smilesymphony.csv"
 }
 
 var frame = 90
